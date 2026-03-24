@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Totem de AutoAtendimento</title>
+</head>
+<body>
+    <section class="layout">        
+        <!--Menu lateral-->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+                    <li class="menu-list" >
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-duotone fa-solid fa-user-check"></i> 
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+                    <li class="menu-list active">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-regular fa-file"></i> 
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!--Parte principal-->
+        <main class="main_content">
+            <!--Cabeçalho-->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Etec+CPS.png" alt="Logo da Etec e do Centro Paula Souza" width="300px" height="180px">
+                </div>
+                
+                <h1 class="top_title">Documentos</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            <section class="document_container">
+                <p class="document_info">
+                    Saiba como obter seus documentos acadêmicos.
+                </p>
+
+                <!--Aqui fala sobre os documentos que são necessários para a declaração da matrícula-->
+                <article class="document_card">
+                    <h2 class="documents_title">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <p class="card_p">Declaração de Matrícula</p>
+                    </h2>
+                    <ul class="document_list list_style">
+                        <li>Comprova que você está matriculado na instituição.</li>
+                        <li><strong>Como obter:</strong> Solicite no portal do aluno ou na secretaria. Prazo: até 3 dias úteis.</li>
+                    </ul>
+                </article>
+
+                <!--Histórico Escolar-->
+                <article class="document_card">
+                    <h2 class="documents_title">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p class="card_p">Histórico Escolar</p>
+                    </h2>
+                    <ul class="document_list list_style">
+                        <li>Registro completo das disciplinas cursadas e notas obtidas.</li>
+                        <li><strong>Como obter:</strong> Disponível no portal do aluno após o encerramento de cada semestre.</li>
+                    </ul>
+                </article>
+
+                <!--Comprovante de Conclusão-->
+                <article class="document_card">
+                    <h2 class="documents_title">
+                        <i class="fa-solid fa-award"></i>
+                        <p class="card_p">Comprovante de Conclusão</p>
+                    </h2>
+                    <ul class="document_list list_style">
+                        <li>Documento que atesta a conclusão do curso técnico.</li>
+                        <li><strong>Como obter:</strong> Solicite na secretaria após a colação de grau. Prazo: até 10 dias úteis.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!--Rodapé-->
+           <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+
+</body>
+</html>       

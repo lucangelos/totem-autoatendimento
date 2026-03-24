@@ -1,0 +1,224 @@
+/* Container principal */
+.duvidas_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+/* Texto informativo */
+.duvidas_info{
+    font-size: 1.5em;
+    color: #6b6b6b;
+}
+
+/* Área dos cards */
+.duvidas_container{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: center;
+    gap: 60px;
+}
+
+.duvidas_cards {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* Card */
+.duvidas_card{
+    background: var(--white);
+    width: 620px;
+    height:1300px;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Hover leve (opcional mas profissional) */
+.duvidas_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Ícone */
+/* .duvidas_card i{
+    font-size: 4em;
+    color: #c90000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+} */
+
+/* Título do card */
+.card_title{
+    font-size: 2em;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+/* Texto do card */
+.card_text{
+    font-size: 1.5em;
+    color: #6b6b6b;
+}
+
+
+/*Microsoft + NSA*/
+
+.microsoft_container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 15px;
+    margin: 16px;
+}
+
+.microsoft_title {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.microsoft_link {
+    text-decoration: none;
+    color: var(--red);
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+}
+
+.microsoft_link:hover {
+    text-decoration: underline;
+}
+
+.microsoft_card {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    border-radius: 16px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.accordion_header {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.num1 {
+    margin-top: 16px;
+}
+
+.accordion_header span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion_body {
+    color: var(--black);
+    font-size: 1.1rem;
+    opacity: 0;
+    height: 0;
+}
+
+.accordion_body.active2{
+    height: 100%;
+    opacity: 1;
+    padding: 7px 0;
+}
+
+.fa-chevron-down {
+    transition: transform .2 linear;
+}
+
+.accordion:has(.active2) .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+hr {
+    width: 100%;
+    margin: 10px 0;
+}
+.accordion_text {
+    background: transparent;
+    color: var(--black);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+@media (max-width: 1399px) {
+    .duvidas_info {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+
+    .card_title {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .card_text {
+        font-size: 2.8rem;
+        font-weight: 400;
+    }
+
+    .duvidas_card {
+        width: auto;
+        gap: 30px;
+    }
+
+    .top_title {
+        font-size: 1.8rem;
+    }
+
+    .microsoft_link {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+
+    .microsoft_info {
+        margin: 30px 0;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    
+    .accordion_header {
+        font-size: 2.3rem;
+        font-weight: 500;
+        padding: 15px;
+    }
+
+    .accordion_text {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+}

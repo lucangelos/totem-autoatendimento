@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendário Acadêmico</title>
+</head>
+<body>
+    <section class="layout">        
+        <!-- Menu lateral -->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-solid fa-user-check"></i> 
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-regular fa-file"></i> 
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list active">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main_content">
+
+            <!-- Cabeçalho -->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Etec+CPS.png" alt="Logo da Etec e do Centro Paula Souza" width="300px" height="180px">
+                </div>
+                
+                <h1 class="top_title">Ajuda</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            <section class="help_container">
+                <p class="help_info">
+                    Informações de contato e orientações para a atendimento presencial.
+                </p>
+
+                <!--Horários da Secretaria-->
+                <article class="help_card">
+                    <h2 class="help_title">
+                        <i class="fa-regular fa-clock"></i>
+                        <p class="card_p">Horários da Secretaria</p>
+                    </h2>
+
+                    <ul class="help_list list_style">
+                        <li>Segunda a Sexta: <strong>8h às 17h</strong>.</li>
+                        <li>Sábado: <strong>8h às 12h</strong> (apenas entrega de documentos).</li>
+                        <li>Domingo e Feriados: <strong class="strong_red">Fechado</strong>.</li>
+                    </ul>
+                </article>
+
+                <!--Contatos-->
+                <article class="help_card">
+                    <h2 class="help_title">
+                        <p class="card_p">Contatos</p>
+                    </h2>
+
+                    <ul class="help_list list_style">
+                        <li><i class="fa-solid fa-phone icone_red"></i> (11) 1234-5678</li>
+                        <li><i class="fa-regular fa-envelope icone_red"></i> secretaria@etec.sp.gov.br</li>
+                        <li><i class="fa-solid fa-location-dot icone_red"></i>Rua VaiCatarCoquinho, 67–Valinhos, NÃO SEI</li>
+                    </ul>
+                </article>
+
+                <!--Quando procurar a secretaria-->
+                <article class="help_card2">
+                    <h2 class="help_title">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <p class="card_p">Quando procurar a secretaria presencialmente?</p>
+                    </h2>
+
+                    <ul class="help_list">
+                        <li>Entrega de documentos originais;</li>
+                        <li>Assinatura de termos e contratos;</li>
+                        <li>Problemas de acesso ao portal do aluno (NSA);</li>
+                        <li>Situações que exijam análise individual.</li>
+                </article>
+            </section>            
+            
+            
+            <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+.rematricula_container, 
+.document_container,
+.help_container {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+}
+
+.rematricula_info,
+.document_info,
+.help_info,
+.microsoft_info {
+    font-size: 1.5rem;
+    color: var(--gray1);
+}
+
+.rematricula_card,
+.document_card,
+.help_card,
+.help_card2 {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    /* flex-grow: 1; */
+}
+
+.help_card2 {
+    background: rgba(255, 187, 187, 0.979);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 5px rgb(209, 111, 111);
+}
+
+.rematricula_title,
+.documents_title,
+.help_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--red);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.rematricula_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--gray2);
+    font-size: 1.1rem;
+}
+
+.document_list, 
+.help_list,
+.help_list2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.rematricula_list li {
+    margin-left: 15px;
+}
+
+.document_list li {
+    margin-left: 15px;
+}
+
+.help_list li {
+    margin-left: 15px;
+}
+
+.list_style {
+    list-style: none;
+}
+
+.ordered {
+    list-style: decimal;
+}
+
+.icone_red, .strong_red {
+    color: var(--red);
+}
+
+.duvidas_link {
+    text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+
+.rematricula_container, 
+.document_container,
+.help_container {
+    padding: 60px 60px;
+}
+
+.rematricula_title,
+.documents_title,
+.help_title {
+    font-size: 1.8rem;
+}
+
+.rematricula_info,
+.document_info,
+.help_info,
+.microsoft_info {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.rematricula_card,
+.document_card,
+.help_card,
+.help_card2 {
+    width: 100%;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+}
+
+
+.rematricula_title,
+.documents_title,
+.help_title {
+    font-size: 2.4rem;
+    padding: 0 0 15px 0;
+}
+
+.rematricula_list, 
+.document_list, 
+.help_list,
+.help_list2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+}

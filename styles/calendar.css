@@ -1,0 +1,81 @@
+/* ================= CALENDÁRIO ================= */
+
+.calendar_container {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.calendar_info {
+    font-size: 1.5rem;
+    color: var(--gray1);
+    margin-bottom: 10px;
+}
+
+.month_card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+}
+
+.month_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--red);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.month_events {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.month_events li {
+    display: flex;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+.event_date {
+    font-weight: 600;
+    color: var(--red);
+    min-width: 120px;
+}
+
+.event_desc {
+    color: var(--gray2);
+}
+
+@media (max-width: 1399px) {
+    .calendar_info {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .calendar_container {
+    padding: 60px 60px; /* aumenta o espaço lateral */
+    }
+
+    .month_card {
+        width: 100%;
+        padding: 35px 40px;
+        margin-bottom: 30px; /* deixa o card maior */
+    }
+
+    .month_title {
+        font-size: 2.4rem;
+        padding: 0 0 10px 0;
+    }
+
+    .month_events li {
+        font-size: 1.9rem;
+    }
+    
+}

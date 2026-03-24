@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Totem de AutoAtendimento</title>
+</head>
+<body>
+    <section class="layout">        
+        <!--Menu lateral-->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list active">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+                    <li class="menu-list" >
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-duotone fa-solid fa-user-check"></i>
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-regular fa-file"></i> 
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!--Parte principal-->
+        <main class="main_content">
+            <!--Cabeçalho-->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Etec+CPS.png" alt="Logo da Etec e do Centro Paula Souza" width="300px" height="180px">
+                </div>
+                
+                <h1 class="top_title">Iníco</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            <section class="introduction">
+                <h2 class="introduction_title">Bem-vindo ao <br>Totem de Autoatendimento</h2>
+                <p class="introduction_txt">
+                    Utilize este totem para acessar informações acadêmicas,<br> solicitar documentos e muito mais,
+                    sem precisar ir à secretaria.
+                </p>
+            </section>
+
+            <section class="services">
+                <a href="rematricula.html" class="card_link">
+                    <article class="card">
+                        <div class="icone circle"> <i class="fa-duotone fa-solid fa-user-check"></i></div>
+                        <h3 class="card_title">Rematrícula</h3>
+                        <p class="card_text">Prazos e orientações</p>
+                    </article>
+                </a>
+
+                <a href="documents.html" class="card_link">
+                    <article class="card">
+                        <div class="icone circle"><i class="fa-regular fa-file"></i></div>
+                        <h3 class="card_title">Documentos</h3>
+                        <p class="card_text">Declarações e histórico</p>
+                    </article>
+                </a>
+                
+                <a href="calendar.html" class="card_link">
+                    <article class="card">
+                        <div class="icone circle"><i class="fa-regular fa-calendar"></i></div>
+                        <h3 class="card_title">Calendário</h3>
+                        <p class="card_text">Datas importantes</p>
+                    </article>
+                </a>
+
+                <a href="duvidas.html" class="card_link">
+                    <article class="card">
+                        <div class="icone circle"><i class="fa-regular fa-circle-question"></i></div>
+                        <h3 class="card_title">Dúvidas Frequentes</h3>
+                        <p class="card_text">Perguntas comuns</p>
+                    </article>
+                </a>
+
+            </section>
+
+            <!--Rodapé-->
+            <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+</body>
+</html>

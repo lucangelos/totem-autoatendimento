@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendário Acadêmico</title>
+</head>
+<body>
+    <section class="layout">        
+        <!-- Menu lateral -->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-solid fa-user-check"></i> 
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-regular fa-file"></i> 
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list active">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main_content">
+
+            <!-- Cabeçalho -->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Etec+CPS.png" alt="Logo da Etec e do Centro Paula Souza" width="300px" height="180px">
+                </div>
+                
+                <h1 class="top_title">Dúvidas<br> Frequentes</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            
+            <section class="duvidas_container">
+                <p class="duvidas_info">
+                    Selecione uma categoria para ver as dúvidas mais comuns.
+                </p>
+
+                <div class="duvidas_cards"></div>
+                    <a href="microsoft.html" class="duvidas_link">
+                        <!--Dúvidas sobre a Microsoft-->
+                        <article class="duvidas_card">
+                            <img src="img/Microsoft.png" alt="Microsoft Teams + Authenticator" width="390px" height="400px">
+                            <h3 class="card_title">Microsoft Teams <br>+<br> Authenticator</h3>
+                            <p class="card_text">Dúvidas sobre acesso e autentificação</p>
+                        </article>
+                    </a>
+
+                    <a href="nsa.html" class="duvidas_link">
+                        <!--Dúvidas sobre o NSA-->
+                        <article class="duvidas_card">
+                            <img src="img/Logo-NSA.png" alt="Logo do NSA" width="390px" height="400px" class="nsaIMG">
+                            <h3 class="card_title">NSA (Situação do Aluno)</h3>
+                            <p class="card_text">Consultas de notas, faltas e situação</p>
+                        </article>
+                    </a>
+                </div>
+            </section>
+            
+            <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+    
+</body>
+</html>

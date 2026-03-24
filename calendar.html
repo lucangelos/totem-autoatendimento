@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendário Acadêmico</title>
+</head>
+<body>
+    <section class="layout">        
+        <!-- Menu lateral -->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list active">
+                        <a href="#" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-solid fa-user-check"></i> 
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-regular fa-file"></i> 
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main_content">
+
+            <!-- Cabeçalho -->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Etec+CPS.png" alt="Logo da Etec e do Centro Paula Souza" width="300px" height="180px">
+                </div>
+                
+                <h1 class="top_title">Calendário Acadêmico</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            <section class="calendar_container">
+                <p class="calendar_info">
+                    Confira as principais datas do calendário acadêmico.
+                </p>
+
+                <!--Fevereiro-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Fevereiro</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">11/02</span>
+                            <span class="event_desc">Início das aulas - 1º semestre</span>
+                        </li>
+                        <li>
+                            <span class="event_date">16/02 – 18/02</span>
+                            <span class="event_desc">Carnaval + Cinzas (sem aula)</span>
+                        </li>
+                    </ul>
+                </article>    
+
+                <!--Março-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Março</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">17/03 – 21/03</span>
+                            <span class="event_desc">Semana de prova</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!--Abril-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Abril</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">18/04</span>
+                            <span class="event_desc">Sexta-feira Santa – Feriado<span>
+                        </li>
+                        <li>
+                            <span class="event_date">21/04</span>
+                            <span class="event_desc">Tiradentes – Feriado<span>
+                        </li>
+                        <li>
+                            <span class="event_date">29/04</span>
+                            <span class="event_desc">Lanaçamentos das notas do 1º bimestre</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!--Maio-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Maio</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">01/05</span>
+                            <span class="event_desc">Dia do Trabalhador – Feriado<span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!--Junho-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Junho</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">08/06 – 12/06</span>
+                            <span class="event_desc">Semana de provas P2<span>
+                        </li>
+                        <li>
+                            <span class="event_date">12/06 ou 19/06</span>
+                            <span class="event_desc">Apresentação dos Trabalhos de Conclusão de Curso para os alunos do periodo noturno<span>
+                        </li>
+                        <li>
+                            <span class="event_date">24/06</span>
+                            <span class="event_desc">Lançamentos das notas do 2º bimestre<span>
+                        </li>
+                    </ul>
+                </article>
+
+                <!--Julho-->
+                <article class="month_card">
+                    <h2 class="month_title">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <p class="card_p">Julho</p>
+                    </h2>
+                    <ul class="month_events">
+                        <li>
+                            <span class="event_date">06/07</span>
+                            <span class="event_desc">Recesso<span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+
+            <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+    
+</body>
+</html>
