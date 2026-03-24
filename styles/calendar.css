@@ -57,6 +57,7 @@
     .calendar_info {
         font-size: 2rem;
         margin-bottom: 20px;
+        font-weight: 600;
     }
 
     .calendar_container {
