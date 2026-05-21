@@ -1,0 +1,92 @@
+/* ================= CURSOS DETALHADOS ================= */
+
+.courses_container {
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.courses_info {
+    font-size: 1.5rem;
+    color: var(--gray1);
+    margin-bottom: 25px;
+}
+
+/* CARD */
+.course_detail_card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px 35px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.course_detail_card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* NOME DO CURSO */
+.course_name {
+    font-size: 2rem;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+/* INFORMAÇÕES */
+.course_data {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.course_data p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* DESCRIÇÃO */
+.course_description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--gray1);
+}
+
+@media (max-width: 1399px) {
+
+    .courses_container {
+        padding: 35px 25px;
+    }
+
+    .courses_info {
+        font-size: 1.7rem;
+    }
+
+    .course_detail_card {
+        padding: 25px;
+    }
+
+    .course_name {
+        font-size: 2.2rem;
+    }
+
+    .course_data {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .course_data p {
+        font-size: 1.5rem;
+    }
+
+    .course_description {
+        font-size: 1.3rem;
+    }
+
+    .menu {
+        margin: 0 120px;
+    }
+}

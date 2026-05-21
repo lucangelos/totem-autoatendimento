@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Totem de AutoAtendimento</title>
+</head>
+<body>
+    <section class="layout">        
+        <!--Menu lateral-->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i> 
+                            <p>Início</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i> 
+                            <p>Calendário Acadêmico</p>
+                        </a>    
+                    </li>
+                    <li class="menu-list" >
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-duotone fa-solid fa-user-check"></i> 
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+                    <li class="menu-list active">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Cursos</p>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i> 
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!--Parte principal-->
+        <main class="main_content">
+            <!--Cabeçalho-->
+            <header class="top">
+                <div class="top_left">
+                    <img src="img/Logos.png" alt="Logo da Etec e do Centro Paula Souza" width="150px" height="100px">
+                </div>
+                
+                <h1 class="top_title">Cursos<br>Presenciais</h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+            </header>
+
+            <section class="courses_container" id="courses_container">
+
+                <a href="documents.html" class="microsoft_link">
+                    <i class="fa-solid fa-arrow-left" style="color: rgb(228, 16, 16);"></i> <!--Voltar para Cursos Oferecidos -->
+                </a>
+
+                <p class="courses_info">
+                    Confira os cursos disponíveis nesta categoria.
+                </p>
+
+                <!--
+                <article class="course_detail_card">
+
+                    <h2 class="course_name">
+                        Desenvolvimento de Sistemas
+                    </h2>
+
+                    <div class="course_data">
+                        <p>
+                            <strong>Período:</strong> Noturno
+                        </p>
+
+                        <p>
+                            <strong>Duração:</strong> 3 semestres
+                        </p>
+                    </div>
+
+                    <p class="course_description">
+                        Curso focado no desenvolvimento de sistemas web, desktop e banco de dados,
+                        utilizando tecnologias modernas e conceitos de programação.
+                    </p>
+
+                </article>
+
+                
+                <article class="course_detail_card">
+
+                    <h2 class="course_name">
+                        Logística
+                    </h2>
+
+                    <div class="course_data">
+                        <p>
+                            <strong>Período:</strong> Vespertino
+                        </p>
+
+                        <p>
+                            <strong>Duração:</strong> 3 semestres
+                        </p>
+                    </div>
+
+                    <p class="course_description">
+                        Formação voltada para processos logísticos, armazenamento,
+                        transporte e gestão de operações.
+                    </p>
+
+                </article> -->
+
+            </section>
+           <footer class="alert">
+                <div></div>
+                <div class="alert_text">
+                    Este totem não substitui<br> o atendimento presencial em casos específicos.
+                </div>
+                <div class="alert_button">
+                    <button class="help_button">
+                        <a href="help.html" class="help_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            Ajuda
+                        </a>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </section>
+
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/cursosPresenciais.js"></script>
+</body>
+</html>       
