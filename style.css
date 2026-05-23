@@ -2,6 +2,7 @@
 @import url("styles/together.css");
 @import url("styles/duvidas.css ");
 @import url("styles/cursos.css");
+@import url("styles/atestado.css");
 
 :root {
     --font-family: 'Inter', sans-serif;
