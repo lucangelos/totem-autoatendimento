@@ -6,6 +6,11 @@ document.getElementById(
     "successModal"
 );
 
+const closeModal =
+document.getElementById(
+    "closeModal"
+);
+
 const canvas =
 document.getElementById("canvas");
 
@@ -266,22 +271,25 @@ async () => {
         }
 
         successModal
-        .classList
-        .add("show");
-
-        /* fecha sozinho */
-
-        setTimeout(() => {
-
-            successModal
-            .classList
-            .remove("show");
-
-        }, 3000);
+.classList
+.add("show");
 
         console.log(
             dados
         );
+
+        /* FECHAR MODAL */
+
+closeModal
+.addEventListener(
+"click",
+() => {
+
+    successModal
+    .classList
+    .remove("show");
+
+});
 
     }
 
