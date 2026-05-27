@@ -270,26 +270,17 @@ async () => {
             return;
         }
 
-        successModal
-.classList
-.add("show");
+        if(dados.mensagem) {
+            console.log(successModal);
+            successModal
+            .classList
+            .add("show");
+
+        }
 
         console.log(
             dados
         );
-
-        /* FECHAR MODAL */
-
-closeModal
-.addEventListener(
-"click",
-() => {
-
-    successModal
-    .classList
-    .remove("show");
-
-});
 
     }
 
@@ -301,4 +292,19 @@ closeModal
             "Erro ao conectar com servidor"
         );
     }
+});
+
+/* ==========================
+   FECHAR MODAL
+========================== */
+
+closeModal
+.addEventListener(
+"click",
+() => {
+
+    successModal
+    .classList
+    .remove("show");
+
 });
