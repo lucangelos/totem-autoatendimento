@@ -94,42 +94,15 @@ app.post(
                 });
             }
 
-            await transporter.sendMail({
+            console.log("Dados recebidos:");
+console.log(req.body);
+console.log(req.file);
 
-                from: process.env.EMAIL_USER,
+/* envio fake temporário */
 
-                to: process.env.EMAIL_DESTINO,
-
-                subject:
-                "Novo Atestado Médico",
-
-                html: `
-                    <h2>Novo atestado enviado</h2>
-
-                    <p>
-                        <strong>RM:</strong>
-                        ${rm}
-                    </p>
-
-                    <p>
-                        <strong>Nome:</strong>
-                        ${nome}
-                    </p>
-
-                    <p>
-                        <strong>Curso:</strong>
-                        ${curso}
-                    </p>
-                `,
-
-                attachments: [
-                    {
-                        filename: foto.filename,
-                        path: foto.path
-                    }
-                ]
-            });
-
+await new Promise(resolve =>
+    setTimeout(resolve, 1000)
+);
             res.json({
                 mensagem:
                 "Atestado enviado com sucesso!"
