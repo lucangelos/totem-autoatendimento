@@ -6,7 +6,9 @@ const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
 
-/* criar uploads automaticamente */
+dotenv.config();
+
+/* ================= UPLOADS ================= */
 
 if (!fs.existsSync("uploads")) {
 
@@ -14,9 +16,9 @@ if (!fs.existsSync("uploads")) {
 
 }
 
-dotenv.config();
-
 const app = express();
+
+/* ================= CORS ================= */
 
 app.use(cors({
     origin: "*",
@@ -29,21 +31,29 @@ app.use(express.static(__dirname));
 /* ================= MULTER ================= */
 
 const storage = multer.diskStorage({
+
     destination: (req, file, cb) => {
+
         cb(null, "uploads/");
+
     },
 
     filename: (req, file, cb) => {
+
         cb(
             null,
-            Date.now() + path.extname(file.originalname)
+            Date.now() +
+            path.extname(
+                file.originalname
+            )
         );
+
     }
+
 });
 
-const upload = multer({
-    storage
-});
+const upload =
+multer({ storage });
 
 /* ================= NODEMAILER ================= */
 
@@ -57,72 +67,186 @@ nodemailer.createTransport({
     secure: false,
 
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user:
+        process.env.EMAIL_USER,
+
+        pass:
+        process.env.EMAIL_PASS
     },
 
     tls: {
-        rejectUnauthorized: false
-    }
+        rejectUnauthorized:
+        false
+    },
+
+    connectionTimeout:
+    15000,
+
+    greetingTimeout:
+    15000,
+
+    socketTimeout:
+    20000
 
 });
 
 /* ================= ENVIO ================= */
 
 app.post(
-    "/enviar-atestado",
-    upload.single("foto"),
-    async (req, res) => {
+"/enviar-atestado",
 
-        try {
+upload.single("foto"),
 
-            const {
-                rm,
-                nome,
-                curso
-            } = req.body;
+async (req, res) => {
 
-            const foto = req.file;
-            
-            console.log(req.body);
-            console.log(req.file);
+    try {
 
-            if (!foto) {
-                return res.status(400).json({
-                    erro: "Foto não enviada"
-                });
-            }
+        const {
+            rm,
+            nome,
+            curso
+        } = req.body;
 
-            console.log("Dados recebidos:");
-console.log(req.body);
-console.log(req.file);
+        const foto =
+        req.file;
 
-/* envio fake temporário */
+        console.log(
+            "Dados recebidos:"
+        );
 
-await new Promise(resolve =>
-    setTimeout(resolve, 1000)
-);
-            res.json({
-                mensagem:
-                "Atestado enviado com sucesso!"
-            });
+        console.log(
+            req.body
+        );
 
-        } catch (erro) {
+        console.log(
+            req.file
+        );
 
-            console.error(erro);
+        /* validação */
 
-            res.status(500).json({
+        if(!foto) {
+
+            return res
+            .status(400)
+            .json({
+
                 erro:
-                "Erro ao enviar atestado"
+                "Foto não enviada"
+
             });
+
         }
+
+        /* delay de 5 segundos */
+
+        console.log(
+            "Aguardando 5 segundos..."
+        );
+
+        await new Promise(
+            resolve =>
+            setTimeout(
+                resolve,
+                5000
+            )
+        );
+
+        console.log(
+            "Enviando email..."
+        );
+
+        /* envio email */
+
+        await transporter
+        .sendMail({
+
+            from:
+            process.env
+            .EMAIL_USER,
+
+            to:
+            process.env
+            .EMAIL_DESTINO,
+
+            subject:
+            "Novo Atestado Médico",
+
+            html: `
+                <h2>
+                    Novo atestado enviado
+                </h2>
+
+                <p>
+                    <strong>
+                    RM:
+                    </strong>
+
+                    ${rm}
+                </p>
+
+                <p>
+                    <strong>
+                    Nome:
+                    </strong>
+
+                    ${nome}
+                </p>
+
+                <p>
+                    <strong>
+                    Curso:
+                    </strong>
+
+                    ${curso}
+                </p>
+            `,
+
+            attachments: [
+                {
+                    filename:
+                    foto.filename,
+
+                    path:
+                    foto.path
+                }
+            ]
+        });
+
+        console.log(
+            "Email enviado!"
+        );
+
+        res.json({
+
+            mensagem:
+            "Atestado enviado com sucesso!"
+
+        });
+
     }
-);
+
+    catch(erro) {
+
+        console.error(
+            erro
+        );
+
+        res
+        .status(500)
+        .json({
+
+            erro:
+            "Erro ao enviar atestado"
+
+        });
+    }
+});
 
 /* ================= START ================= */
 
 const PORT =
-process.env.PORT || 3000;
+process.env.PORT ||
+3000;
 
 app.listen(PORT, () => {
 
@@ -130,4 +254,5 @@ app.listen(PORT, () => {
         `Servidor rodando:
         http://localhost:${PORT}`
     );
+
 });
