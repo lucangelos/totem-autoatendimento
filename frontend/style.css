@@ -223,7 +223,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
 
     border-left: 8px solid var(--red);
 }
@@ -416,6 +416,15 @@ body {
 
     .introduction_txt {
         font-size: 1.5rem;
+    }
+
+    .medical_certificate {
+        width: 75%;
+    }
+
+    .medical_title {
+        font-size: 1.8rem;
+        font-weight: 600;
     }
 
 }
