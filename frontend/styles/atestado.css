@@ -201,5 +201,87 @@
     border-color: var(--red);
 }
 
+/* ================= MODAL SUCESSO ================= */
 
+.success_modal {
+
+    position: fixed;
+    inset: 0;
+
+    background:
+    rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+.success_modal.show {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.success_box {
+
+    background: white;
+
+    width: 400px;
+    max-width: 90%;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,0.2);
+
+    animation:
+    popup 0.3s ease;
+}
+
+.success_box i {
+
+    font-size: 5rem;
+
+    color: #1d9d52;
+
+    margin-bottom: 20px;
+}
+
+.success_box h2 {
+
+    font-size: 1.8rem;
+
+    color: #333;
+}
+
+@keyframes popup {
+
+    from {
+
+        transform:
+        scale(0.8);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform:
+        scale(1);
+
+        opacity: 1;
+    }
+}
 

@@ -1,6 +1,11 @@
 const camera =
 document.getElementById("camera");
 
+const successModal =
+document.getElementById(
+    "successModal"
+);
+
 const canvas =
 document.getElementById("canvas");
 
@@ -260,9 +265,19 @@ async () => {
             return;
         }
 
-        alert(
-            dados.mensagem
-        );
+        successModal
+        .classList
+        .add("show");
+
+        /* fecha sozinho */
+
+        setTimeout(() => {
+
+            successModal
+            .classList
+            .remove("show");
+
+        }, 3000);
 
         console.log(
             dados
