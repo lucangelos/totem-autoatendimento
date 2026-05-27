@@ -19,11 +19,10 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: [
-        "http://localhost:5500",
-        "https://totem-autoatendimento-etec-dmmidw41c-lucas-angelo-s-projects.vercel.app/"
-    ]
+    origin: "*",
+    methods: ["GET", "POST"]
 }));
+
 app.use(express.json());
 app.use(express.static(__dirname));
 
