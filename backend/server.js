@@ -1,47 +1,87 @@
 const express = require("express");
 const multer = require("multer");
-const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
+const { Resend } = require("resend");
 
 dotenv.config();
 
+/* ================= RESEND ================= */
+
+const resend =
+new Resend(
+    process.env
+    .RESEND_API_KEY
+);
+
 /* ================= UPLOADS ================= */
 
-if (!fs.existsSync("uploads")) {
+if (
+    !fs.existsSync(
+        "uploads"
+    )
+) {
 
-    fs.mkdirSync("uploads");
+    fs.mkdirSync(
+        "uploads"
+    );
 
 }
 
-const app = express();
+const app =
+express();
 
 /* ================= CORS ================= */
 
 app.use(cors({
     origin: "*",
-    methods: ["GET", "POST"]
+    methods: [
+        "GET",
+        "POST"
+    ]
 }));
 
-app.use(express.json());
-app.use(express.static(__dirname));
+app.use(
+    express.json()
+);
+
+app.use(
+    express.static(
+        __dirname
+    )
+);
 
 /* ================= MULTER ================= */
 
-const storage = multer.diskStorage({
+const storage =
+multer.diskStorage({
 
-    destination: (req, file, cb) => {
-
-        cb(null, "uploads/");
-
-    },
-
-    filename: (req, file, cb) => {
+    destination:
+    (
+        req,
+        file,
+        cb
+    ) => {
 
         cb(
             null,
+            "uploads/"
+        );
+
+    },
+
+    filename:
+    (
+        req,
+        file,
+        cb
+    ) => {
+
+        cb(
+            null,
+
             Date.now() +
             path.extname(
                 file.originalname
@@ -49,45 +89,11 @@ const storage = multer.diskStorage({
         );
 
     }
-
 });
 
 const upload =
-multer({ storage });
-
-/* ================= NODEMAILER ================= */
-
-const transporter =
-nodemailer.createTransport({
-
-    host: "smtp.gmail.com",
-
-    port: 587,
-
-    secure: false,
-
-    auth: {
-        user:
-        process.env.EMAIL_USER,
-
-        pass:
-        process.env.EMAIL_PASS
-    },
-
-    tls: {
-        rejectUnauthorized:
-        false
-    },
-
-    connectionTimeout:
-    15000,
-
-    greetingTimeout:
-    15000,
-
-    socketTimeout:
-    20000
-
+multer({
+    storage
 });
 
 /* ================= ENVIO ================= */
@@ -95,9 +101,14 @@ nodemailer.createTransport({
 app.post(
 "/enviar-atestado",
 
-upload.single("foto"),
+upload.single(
+    "foto"
+),
 
-async (req, res) => {
+async (
+    req,
+    res
+) => {
 
     try {
 
@@ -134,10 +145,9 @@ async (req, res) => {
                 "Foto não enviada"
 
             });
-
         }
 
-        /* delay de 5 segundos */
+        /* delay 5 segundos */
 
         console.log(
             "Aguardando 5 segundos..."
@@ -155,14 +165,25 @@ async (req, res) => {
             "Enviando email..."
         );
 
-        /* envio email */
+        /* converter imagem */
 
-        await transporter
-        .sendMail({
+        const imagemBase64 =
+        fs
+        .readFileSync(
+            foto.path
+        )
+        .toString(
+            "base64"
+        );
+
+        /* enviar email */
+
+        await resend
+        .emails
+        .send({
 
             from:
-            process.env
-            .EMAIL_USER,
+            "Totem TCC <onboarding@resend.dev>",
 
             to:
             process.env
@@ -180,7 +201,6 @@ async (req, res) => {
                     <strong>
                     RM:
                     </strong>
-
                     ${rm}
                 </p>
 
@@ -188,7 +208,6 @@ async (req, res) => {
                     <strong>
                     Nome:
                     </strong>
-
                     ${nome}
                 </p>
 
@@ -196,7 +215,6 @@ async (req, res) => {
                     <strong>
                     Curso:
                     </strong>
-
                     ${curso}
                 </p>
             `,
@@ -206,8 +224,8 @@ async (req, res) => {
                     filename:
                     foto.filename,
 
-                    path:
-                    foto.path
+                    content:
+                    imagemBase64
                 }
             ]
         });
@@ -248,7 +266,9 @@ const PORT =
 process.env.PORT ||
 3000;
 
-app.listen(PORT, () => {
+app.listen(
+PORT,
+() => {
 
     console.log(
         `Servidor rodando:

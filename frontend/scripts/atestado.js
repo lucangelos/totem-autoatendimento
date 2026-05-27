@@ -251,6 +251,15 @@ async () => {
         const dados =
         await resposta.json();
 
+        if(!resposta.ok) {
+
+            alert(
+                dados.erro
+            );
+
+            return;
+        }
+
         alert(
             dados.mensagem
         );
