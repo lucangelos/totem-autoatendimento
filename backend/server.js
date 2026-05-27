@@ -9,7 +9,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "http://localhost:5500",
+        "https://totem-autoatendimento-etec.vercel.app/"
+    ]
+}));
 app.use(express.json());
 app.use(express.static(__dirname));
 

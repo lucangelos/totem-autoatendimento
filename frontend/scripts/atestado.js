@@ -241,7 +241,7 @@ async () => {
 
         const resposta =
         await fetch(
-            "http://localhost:3000/enviar-atestado",
+            "https://totem-autoatendimento-backend.onrender.com/enviar-atestado",
             {
                 method: "POST",
                 body: formData
