@@ -12,7 +12,7 @@ const app = express();
 app.use(cors({
     origin: [
         "http://localhost:5500",
-        "https://totem-autoatendimento-etec.vercel.app/"
+        "https://totem-autoatendimento-etec.vercel.app"
     ]
 }));
 app.use(express.json());
