@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Envio de Atestado</title>
+</head>
+<body>
+
+    <section class="layout">
+
+        <!-- Sidebar -->
+        <aside class="side-menu">
+            <nav class="menu">
+                <ul>
+
+                    <li class="menu-list">
+                        <a href="index.html" class="menu_link">
+                            <i class="fa-solid fa-house"></i>
+                            <p>Início</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="calendar.html" class="menu_link">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>Calendário Acadêmico</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="rematricula.html" class="menu_link">
+                            <i class="fa-duotone fa-solid fa-user-check"></i>
+                            <p>Rematrícula</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="documents.html" class="menu_link">
+                            <i class="fa-solid fa-book"></i>
+                            <p>Cursos</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="duvidas.html" class="menu_link">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Dúvidas Frequentes</p>
+                        </a>
+                    </li>
+
+                    <li class="menu-list">
+                        <a href="help.html" class="menu_link">
+                            <i class="fa-solid fa-headphones"></i>
+                            <p>Ajuda/ Atendimento</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main_content">
+
+            <!-- Header -->
+            <header class="top">
+
+                <div class="top_left">
+                    <img
+                        src="img/Logos.png"
+                        alt="Logo Etec e Centro Paula Souza"
+                        width="150"
+                        height="100"
+                    >
+                </div>
+
+                <h1 class="top_title">
+                    Envio de Atestado
+                </h1>
+
+                <div class="top_right">
+                    <span class="date"></span>
+                    <p class="hour"></p>
+                </div>
+
+            </header>
+
+            <!-- Conteúdo -->
+            <section class="medical_page_container">
+
+                <article class="medical_page_card">
+
+                    <h2 class="medical_page_title">
+                        <i class="fa-solid fa-file-medical"></i>
+                        Envio de Atestado Médico
+                    </h2>
+
+                    <p class="medical_page_text">
+                        Preencha os dados abaixo e envie
+                        seu atestado médico para a instituição.
+                    </p>
+
+                    <!-- Dados do aluno -->
+                    <section class="student_data">
+
+                        <!-- RM -->
+                        <div class="input_group">
+                            <label for="rm">
+                                RM do aluno
+                            </label>
+
+                            <input
+                                type="number"
+                                id="rm"
+                                placeholder="Digite seu RM"
+                            >
+                        </div>
+
+                        <!-- Nome -->
+                        <div class="input_group">
+                            <label for="name">
+                                Nome completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Digite seu nome"
+                            >
+                        </div>
+
+                        <!-- Turma -->
+                        <div class="input_group">
+                            <label for="course">
+                                Curso
+                            </label>
+
+                            <select id="course">
+
+                                <option value="">
+                                    Selecione uma opção
+                                </option>
+
+                                <option>
+                                    Contabilidade
+                                </option>
+
+                                <option>
+                                    Química
+                                </option>
+
+                                <option>
+                                    Desenvolvimento de Sistemas
+                                </option>
+
+                                <option>
+                                    Logística
+                                </option>
+
+                                <option>
+                                    Farmácia
+                                </option>
+
+                                <option>
+                                    Comércio Exterior
+                                </option>
+
+                                <option>
+                                    Informática Suporte
+                                </option>
+
+                                <option>
+                                    Recursos Humanos
+                                </option>
+
+                            </select>
+                        </div>
+
+                    </section>
+
+                    <!-- Área da câmera -->
+                    <section class="camera_section">
+
+                        <div class="camera_preview">
+
+                            <video
+                                id="camera"
+                                autoplay
+                                playsinline
+                                muted>
+                            </video>
+
+                            <img
+                                id="preview"
+                                alt="Prévia da foto">
+
+                        </div>
+
+                        <canvas
+                            id="canvas"
+                            style="display:none;">
+                        </canvas>
+
+                        <button class="capture_button">
+                            <i class="fa-solid fa-camera"></i>
+                            Tirar Foto do Atestado
+                        </button>
+
+                        <button class="send_button">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Enviar
+                        </button>
+
+                    </section>
+                </article>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="alert">
+
+                <div></div>
+
+                <div class="alert_text">
+                    Este totem não substitui
+                    o atendimento presencial
+                    em casos específicos.
+                </div>
+
+                <div class="alert_button">
+                    <button class="help_button">
+
+                        <a href="index.html"
+                        class="help_link">
+
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Voltar
+
+                        </a>
+
+                    </button>
+                </div>
+
+            </footer>
+
+        </main>
+
+    </section>
+
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/atestado.js"></script>
+
+</body>
+</html>
