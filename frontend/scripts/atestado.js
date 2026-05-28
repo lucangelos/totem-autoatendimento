@@ -1,6 +1,8 @@
 const camera =
 document.getElementById("camera");
 
+const loadingModal = document.getElementById("loadingModal");
+
 const successModal =
 document.getElementById(
     "successModal"
@@ -249,6 +251,10 @@ async () => {
             "Enviando..."
         );
 
+        loadingModal
+        .classList
+        .add("show");
+
         const resposta =
         await fetch(
             "https://totem-autoatendimento-backend.onrender.com/enviar-atestado",
@@ -257,6 +263,10 @@ async () => {
                 body: formData
             }
         );
+
+        loadingModal
+        .classList
+        .remove("show");
 
         const dados =
         await resposta.json();
