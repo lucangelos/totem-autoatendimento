@@ -60,3 +60,7 @@ totem-autoatendimento/
 │   ├── .env
 │   ├── package.json
 │   └── .gitignore
+
+## Como acessar?
+
+Link de acesso: [text](https://totem-autoatendimento-etec.vercel.app)
