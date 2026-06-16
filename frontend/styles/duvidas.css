@@ -9,14 +9,16 @@
 
 /* Texto informativo */
 .duvidas_info{
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #6b6b6b;
+    margin-top: 50px;
+    font-weight: 500;
 }
 
 /* Área dos cards */
 .duvidas_container{
     display: grid;
-    grid-template-columns: repeat(1, 400px);
+    grid-template-columns: repeat(1, 600px);
     justify-content: center;
     gap: 60px;
 }
@@ -30,8 +32,8 @@
 /* Card */
 .duvidas_card{
     background: var(--white);
-    width: 620px;
-    height:1000px;
+    width: 500px;
+    height:600px;
     border-radius: 16px;
     border: 1px solid #e0e0e0;
     display: flex;
@@ -51,7 +53,7 @@
 
 /* Título do card */
 .card_title{
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     color: #222;
     margin-bottom: 6px;
@@ -59,7 +61,7 @@
 
 /* Texto do card */
 .card_text{
-    font-size: 1.5em;
+    font-size: 2rem;
     color: #6b6b6b;
 }
 
@@ -91,6 +93,12 @@
     text-decoration: underline;
 }
 
+.microsoft_info {
+    font-size: 1.8rem;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
 .microsoft_card {
     background: var(--white);
     display: flex;
@@ -111,10 +119,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2rem;
-    font-weight: 500;
+    gap: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
     cursor: pointer;
 }
+
 
 .num1 {
     margin-top: 16px;
@@ -125,6 +135,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 10px;
 }
 
 .accordion_body {
@@ -154,8 +165,19 @@ hr {
 }
 .accordion_text {
     background: transparent;
-    color: var(--black);
-    font-size: 1.9rem;
+    color: #504e4e;
+    font-size: 1.6rem;
+    padding-top: 30px;
+    padding-left: 55px;
+}
+
+.lista-numerada {
+    padding-left: 55px;
+}
+
+.lista-nNumerada {
+    padding-left: 55px;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 1399px) {
@@ -217,5 +239,9 @@ hr {
     .lista-nNumerada {
         padding-left: 55px;
         margin-bottom: 5px;
+    }
+
+    .duvidas_container{
+        grid-template-columns: repeat(1, 400px);
     }
 }

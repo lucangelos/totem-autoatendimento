@@ -1,18 +1,12 @@
 function atualizarData() {
     const agora = new Date();
 
-    //meses em pt-BR
-    const meses = [
-        "janeiro", "fevereiro", "março", "abril", "maio",
-        "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
-    ];
-
     //Data completa
     const dia = agora.getDate();
-    const mes = meses[agora.getMonth()];
+    const mes = agora.getMonth()+1;
     const ano = agora.getFullYear();
 
-    const dataCompleta = `${dia} de ${mes} de ${ano}`;
+    const dataCompleta = `${dia}/${mes}/${ano}`;
 
     //Horário completo
     let horas = agora.getHours();
