@@ -61,6 +61,10 @@ body {
 
 .menu ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* distância entre os itens */
+    
 }
 
 .menu-list i {
@@ -116,7 +120,7 @@ body {
 
 .top_title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -124,7 +128,7 @@ body {
     text-align: right;
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
@@ -412,7 +416,11 @@ body {
     }
 
     .top_title {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+
+    .top_right {
+        font-size: 1.3rem;
     }
 
     .introduction_txt {

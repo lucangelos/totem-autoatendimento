@@ -180,6 +180,14 @@ hr {
     margin-bottom: 5px;
 }
 
+.last {
+    padding-bottom: 20px;
+}
+
+.first {
+    padding-top: 10px;
+}
+
 @media (max-width: 1399px) {
     .duvidas_info {
         font-size: 1.7rem;
