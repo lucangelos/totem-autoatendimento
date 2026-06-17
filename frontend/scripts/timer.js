@@ -6,7 +6,7 @@ function atualizarData() {
     const mes = agora.getMonth()+1;
     const ano = agora.getFullYear();
 
-    const dataCompleta = `${dia}/${mes}/${ano}`;
+    const dataCompleta = `${dia}/0${mes}/${ano}`;
 
     //Horário completo
     let horas = agora.getHours();
