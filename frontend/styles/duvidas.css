@@ -9,8 +9,9 @@
 
 /* Texto informativo */
 .duvidas_info{
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: #6b6b6b;
+    font-weight: 600;
     margin-top: 50px;
     font-weight: 500;
 }
@@ -18,7 +19,7 @@
 /* Área dos cards */
 .duvidas_container{
     display: grid;
-    grid-template-columns: repeat(1, 600px);
+    grid-template-columns: repeat(1, 500px);
     justify-content: center;
     gap: 60px;
 }
